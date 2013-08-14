@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-var express = require('express');
-var fs = require('fs');
-var htmlfile = "index.html";
-
-var app = express.createServer(express.logger());
-=======
 // Define routes for simple SSJS web app. 
 // Writes Coinbase orders to database.
 var async   = require('async')
@@ -18,17 +11,11 @@ var app = express();
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.set('port', process.env.PORT || 8080);
->>>>>>> develop
 
 // Render homepage (note trailing slash): example.com/
 app.get('/', function(request, response) {
-<<<<<<< HEAD
-  var html = fs.readFileSync(htmlfile).toString();
-    response.send(html);
-=======
   var data = fs.readFileSync('index.html').toString();
   response.send(data);
->>>>>>> develop
 });
 
 // Render example.com/orders
